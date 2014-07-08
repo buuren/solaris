@@ -2,4 +2,17 @@
 #Tested on solaris (version in wiki)
 
 
-find . -type f ! -name '~' | xargs ggrep -shEIo 'http://(\w+).(\w+).(\w+)' | egrep -vi 'w3|aol|infoaccess|stellent|webworks|apache|unicode|anyname|oracle|adobe|anyname|info.com|sun.com|mycompany|userpc|microsoft|mysite|mydomain|mywebsite|autonomy|myproxy|autodesk|lizardtech|iana|myhostname|mozilla|gnu|fckeditor|macromedia|proxy|filext|fastsearch|handmadesw|webdav|webmaster|xmlsoap|mycomputer|ephox|outsideinsdk|yourserver|youserver|zerotouch|android' | uniq
+
+#fine all files (type=file), which don't have '~' in the same.
+#execute ggrep for each file" 
+#-s silent, don't print errors 
+#-h dont show file name
+#-E use extended regular expression
+#-I ignore binary files
+#-i ignore case-sensitive
+#-o only print match results, not entire line
+find . -type f ! -name '~' | xargs ggrep -shEIo 'http://(\w+).(\w+).(\w+)' | \
+egrep -vi 'w3|aol|infoaccess|stellent|webworks|apache|unicode|anyname|oracle|adobe|anyname|\
+info.com|sun.com|mycompany|userpc|microsoft|mysite|mydomain|mywebsite|autonomy|myproxy|autodesk|\
+lizardtech|iana|myhostname|mozilla|gnu|fckeditor|macromedia|proxy|filext|fastsearch|handmadesw|\
+webdav|webmaster|xmlsoap|mycomputer|ephox|outsideinsdk|yourserver|youserver|zerotouch|android' | uniq
