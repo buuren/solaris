@@ -22,3 +22,12 @@ webdav|webmaster|xmlsoap|mycomputer|ephox|outsideinsdk|yourserver|youserver|zero
 #uniq. Note: it will sort unique results only within the same file (not globally)
 | uniq
 #-----------------------------------------------------------------------------------------------------------------------------------
+
+
+#list all files
+#-R recursively
+# lrt - just make output "prettier", nothing special
+ls -Rlrt | \
+# use grep to capture files only with extension jpg, png, tiff (images)
+egrep '.jpg|.png|.tiff' | \
+#| wc -l
