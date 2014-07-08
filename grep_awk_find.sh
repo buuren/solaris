@@ -1,7 +1,7 @@
 #This file contains random crazy forms of grep/ggrep/egrep/find/awk usage.
 #Tested on solaris (version in wiki)
 
-
+#-----------------------------------------------------------------------------------------------------------------------------------
 #fine all files (type=file), which don't have '~' in the same.
 find . -type f ! -name '~' | \
 #execute ggrep for each file" 
@@ -21,3 +21,4 @@ lizardtech|iana|myhostname|mozilla|gnu|fckeditor|macromedia|proxy|filext|fastsea
 webdav|webmaster|xmlsoap|mycomputer|ephox|outsideinsdk|yourserver|youserver|zerotouch|android' \
 #uniq. Note: it will sort unique results only within the same file (not globally)
 | uniq
+#-----------------------------------------------------------------------------------------------------------------------------------
