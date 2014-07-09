@@ -31,4 +31,8 @@ ls -Rlrt | \
 # use grep to capture files only with extension jpg, png, tiff (images)
 egrep '.jpg|.png|.tiff' | \
 # count results
-| wc -l
+wc -l
+
+
+
+ls -Rlrt | egrep '.jpg|.png|.tiff' | awk '{ total += $5 }; END { print total }'
