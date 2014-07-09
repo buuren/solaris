@@ -30,4 +30,5 @@ webdav|webmaster|xmlsoap|mycomputer|ephox|outsideinsdk|yourserver|youserver|zero
 ls -Rlrt | \
 # use grep to capture files only with extension jpg, png, tiff (images)
 egrep '.jpg|.png|.tiff' | \
-#| wc -l
+# count results
+| wc -l
